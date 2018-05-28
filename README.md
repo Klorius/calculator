@@ -1,2 +1,2 @@
 # calculator
-first attempt to make a calculator, css heavy
+first attempt to make a calculator
