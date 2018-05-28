@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!--gør siden mobilvenlig  -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Javascript -->
+	<script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
+ 
+ 	 <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- font awesome stylesheet -->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+	<!--latest bootstrap social 5.1.1 -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css" />
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Lommeregner</title>
+</head>
+<body>
+	
+
+	<!--wires-->
+		<div id="wirebox">
+			<div class="wire" id="wireTop"></div>
+
+		</div>
+	
+	<div class="wrapper">
+
+			<!--lines on the table-->
+		<div id="tableLines">
+			<div class="metalLine"></div>
+			<div class="metalLine"></div>
+		</div>
+		<!--Svg indicators er slået fra til at jeg kan finde ud af hvordan man præcist laver graduering indeni. Css'en er blevet slettet!-->
+		<!--
+		<div id="indicatorsRight">
+			<svg id="indicator1"> <circle class="indicator" cx="50" cy="50" r="40" stroke="silver" stroke-width="2" fill=rgba(230,100,70,1) /> </svg>
+			<svg id="indicator2"> <circle class="indicator" cx="50" cy="50" r="40" stroke="silver" stroke-width="2" fill=rgba(230,100,70,1) /> </svg>
+			<svg id="indicator3"> <circle class="indicator" cx="50" cy="50" r="40" stroke="silver" stroke-width="2" fill=rgba(230,100,70,1) /> </svg>
+			<svg id="indicator4"> <circle class="indicator" cx="50" cy="50" r="40" stroke="silver" stroke-width="2" fill=rgba(230,100,70,1) /> </svg>
+		</div>
+		-->
+		<!--paper-->
+		
+		<div class="paper">
+			<!--notepad-->
+			<div id="notepadTopBar"></div>			
+
+			<div id="paperTop">
+				<div class="paperRipTop">
+					<div class="notepadMetal"></div>
+				</div>
+				<div class="paperRipTop">
+					<div class="notepadMetal"></div>
+				</div>
+				<div class="paperRipTop">
+					<div class="notepadMetal"></div>
+				</div>
+				<div class="paperRipTop">
+					<div class="notepadMetal"></div>
+				</div>
+				<div class="paperRipTop">
+					<div class="notepadMetal"></div>
+				</div>
+				<div class="paperRipTop">
+					<div class="notepadMetal"></div>
+				</div>
+				<div class="paperRipTop">
+					<div class="notepadMetal"></div>
+				</div>
+				<div class="paperRipTop">
+					<div class="notepadMetal"></div>
+				</div>
+				<div class="paperRipTop">
+					<div class="notepadMetal"></div>
+			</div>
+				<div class="paperRipTop">
+					<div class="notepadMetal"></div>
+				</div>
+				<div class="paperRipTop">
+					<div class="notepadMetal"></div>
+				</div>
+				<div class="paperRipTop">
+					<div class="notepadMetal"></div>
+				</div>
+				<div class="paperRipTop">
+					<div class="notepadMetal"></div>
+				</div>
+				<div class="paperRipTop">
+					<div class="notepadMetal"></div>
+				</div>
+				<div class="paperRipTop">
+					<div class="notepadMetal"></div>
+				</div>
+			</div>
+			
+			
+						
+			<div class="ripOff"></div>
+			
+				<div class="lines"></div>
+				<p class="textStatic1">X = V<sub>0x</sub>t </p>
+				<div class="lines"></div>
+				<p class="textStatic2">Constants: g = 9.8m/s<sup>2</sup></p>
+				<div class="lines"></div>
+				<p class="textStatic3"> angle &#8738 = <input id="angleInput" type="text" maxlength="3"> v<sub>0</sub> = <input id="velocityInput" type="text" maxlength="8"> </p>
+				<div class="lines"></div>
+				<div class="lines"></div>
+				<div class="lines"></div>
+				<div class="lines"></div>
+				<div class="lines"></div>
+				<div class="lines"></div>
+				<p class="textInput">Range = R = (v<sub>0<sup>2</sup></sub>sin 2&#8738) / g = <div id="inputFromPaper"></div></p>
+				<div class="lines"></div>
+				<div class="lines"></div>
+				<div class="lines"></div>
+				<div class="lines"></div>
+				<div class="lines"></div>
+				<div class="lines"></div>
+				<div class="lines"></div>
+				<div class="lines"></div>
+				<div class="lines"></div>
+				<div class="lines"></div>
+				<div class="lines"></div>
+			
+		</div>
+
+		<div class="paper page2"> 
+			
+		</div>
+		<div class="paper page3">
+			
+		</div>
+				
+			<!--calculator-->
+			<div id="calculator">
+				<div class="outerInput">
+						<div>
+							<output type="text" id="input" maxlength="10"></output>
+						</div>
+				</div>
+					
+					<!--silverline above the buttons-->
+					<div class="silverLine"></div>
+					
+					<!--buttons for calculator-->
+					<div class="buttonWrap">
+
+						<div class="onOffButton">
+							<p>Off</p>
+							<label class="switch">
+								<input type="checkbox">
+								<span class="slider">
+								</span>
+							</label>
+							<p>On</p>
+						</div>
+
+						<div class="buttons">
+							<div class="textAboveBtn">
+								<div class="row1"> x<sup>y </sup> </div>
+								<div class="row1"> log </div>
+								<div class="row1">ln </div>
+								<div class="row1"> e<sup>x </sup> </div>
+								<div class="row1"></div>
+							</div>
+							<div >
+								<button class="btn top" id="x Y"></button>
+								<button class="btn top" id="log"></button>
+								<button class="btn top" id="ln"></button>
+								<button class="btn top" id="e X"></button>
+								<button id="clear" class="btn top btnBlue">CLR</button>
+							</div>
+							<div class="textAboveBtn">
+								<div class="row2"> &#8730</div>
+								<div class="row2"> arc </div>
+								<div class="row2"> sin </div>
+								<div class="row2"> cos </div>
+								<div class="row2"> tan</div>
+							</div>
+							<div>
+								<button class="btn top" id="square" value="&#8730 "></button>
+								<button class="btn top" id="ARC"></button>
+								<button class="btn top" id="sin"></button>
+								<button class="btn top" id="cos"></button>
+								<button class="btn top" id="tan"></button>
+							</div>
+							<div class="textAboveBtn">
+								<div class="row3" >1/x</div>
+								<div class="row3" >x&#8596y </div>
+								<div class="row3" >R&#8595 </div>
+								<div class="row3" > STO</div>
+								<div class="row3" >RCL</div>
+							</div>
+							<div>
+								<button class="btn top" id="1/x"></button>
+								<button class="btn top" id="x_to_y"></button>
+								<button class="btn top" id="R_down"></button>
+								<button class="btn top" id="STO"></button>
+								<button class="btn top" id="RCL"></button>
+							</div>
+							<div class="textAboveBtn">
+								<div class="row4"></div>
+								<div class="row4"></div>
+								<div class="row4"> CH S</div>
+								<div class="row4"> E EX</div>
+								<div class="row4"></div>
+							</div>
+							<div>
+								<button id="equal" class="btn fnt btnBlue"> enter &#8593 </button>
+								<button class="btn btnBlue top" id="CH_S"></button>
+								<button class="btn btnBlue top" id="E_EX"></button>
+								<button id="clearEntry" class="btn fnt btnBlue top" value="CE"> CE </button>
+								
+								
+							</div>
+							<div>
+								<button id="minus" class="btn fnt btnBlue" value = "-"> - </button>
+								<button id="seven" value="7" class="number btn btnWhite"> 7 </button>
+								<button id="eight" value="8" class="number btn btnWhite"> 8 </button>
+								<button id="nine" value="9" class="number btn btnWhite"> 9 </button>
+								
+							</div>
+							<div>
+								<button id="plus" class="btn fnt btnBlue" value = "+"> + </button>
+								<button id="four" value="4" class="number btn btnWhite"> 4 </button>
+								<button id="five" value="5" class="number btn btnWhite"> 5 </button>
+								<button id="six" value="6" class="number btn btnWhite"> 6 </button>
+								
+							</div>
+							<div>
+								<button id="multiply" class="btn fnt btnBlue" value ="*"> &#215 </button>
+								<button id="one" value="1" class="number btn btnWhite"> 1 </button>
+								<button id="two" value="2" class="number btn btnWhite"> 2 </button>
+								<button id="three" value="3" class="number btn btnWhite"> 3 </button>
+								
+							</div>
+							<div>
+								<button id="divide" value="/" class ="number btn btnBlue"> &#247 </button>
+								<button id="zero" value="0" class="number btn btnWhite"> 0 </button>
+								<button id="dot" value="." class="number btn btnWhite"> . </button>
+								<button id="pi" value="3.14159265359" class="number btn btnWhite"> &#960 </button>
+								
+							</div>
+
+						</div>
+						
+						<!--logo i bunden af lommeregneren-->
+						<div class="logoBox">
+								<p id="logo"> <img id="hpLogo" src="image/HP_D_B_RGB_72_MX+space.png"> HEWLETT &#8901 PACKARD</p>
+						</div>
+					</div>
+					
+			</div>
+
+	</div>
+		
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
